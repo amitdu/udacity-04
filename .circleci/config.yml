@@ -25,6 +25,7 @@ jobs:
           name: install dependencies
           command: |
             python3 -m venv venv
+            pip install pylint-venv
             . venv/bin/activate
             make install
             # install hadolint
