@@ -4,6 +4,17 @@
 
 In this project, I have deployed a Machine Learning Microservice API using Docker and Kubernates. I have also integrate the circleci to lint Dockerfile and API python code via pylint.
 
+## Directory Structure
+
+- `.circleci` : Circleci build configs
+- `model_data` : Data used for model training
+- `app.py` : Application entrypoint
+- `make_prediction.sh` : Shell script for testing prediction API
+- `run_docker.sh`: Make docker image build and run locally. 
+- `upload_docker.sh`: Tag the image and upload to dockerhub repositry. 
+- `run_kubernates.sh`: Run the docker image via K8
+
+
 ### Project Tasks
 
 I have performed followinng tasks in this project:
@@ -25,13 +36,8 @@ I have performed followinng tasks in this project:
 
 ### Running the machine learnning microservice `app.py`
 
-1. Standalone: `python app.py`
-2. Run in Docker: `./run_docker.sh`
-3. Run in Kubernetes: `./run_kubernetes.sh`
+1. Standalone: `python app.py` : runs onn host at :80 port.
+2. Run in Docker: `./run_docker.sh` : It makes docker image and run that docker image and map to 8000 system port.
+3. Run in Kubernetes: `./run_kubernetes.sh`: It will run pods at 80 port and map 8000 port to 80.
 
-### Kubernetes Steps
-
-- Setup and Configure Docker locally
-- Setup and Configure Kubernetes locally
-- Create Flask app in Container
-- Run via kubectl
+- The prediction can be tested via `./make_prediction` shell command.
