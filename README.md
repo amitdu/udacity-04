@@ -1,4 +1,4 @@
-![CircleCI](https://circleci.com/gh/amitdu/udacity-ml.svg?style=svg)(https://app.circleci.com/pipelines/github/amitdu/udacity-ml)
+[![CircleCI](https://circleci.com/gh/amitdu/udacity-ml.svg?style=svg)](https://app.circleci.com/pipelines/github/amitdu/udacity-ml)
 
 ## Project Overview
 
