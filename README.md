@@ -40,3 +40,9 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+### Bash Commands
+
+* ./run_docker.sh : Creates docker image, tag it and run locally at 8000 port
+* ./upload_docker.sh : Uploads docker image to repo
+* ./run_kubernates.sh : Run pods in local cluster and map port
