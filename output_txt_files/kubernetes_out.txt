@@ -1,1 +1,18 @@
-<paste log output from Kubernetes-mediated prediction, here>
+amit@amit-mac: [~/udacity/DevOps_Microservices/project-ml-microservice-kubernetes -  (master)] $ ./run_kubernetes.sh 
+deployment.apps/udacity-ml created
+NAME                         READY   STATUS              RESTARTS   AGE
+udacity-ml-cb899cd47-72mhm   1/1     Running             0          2s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+E1230 18:10:00.00110    1 httplog.go:79] JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+E1230 18:10:00.011090    1 httplog.go:79] Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+E1230 18:10:01.411696    1 httplog.go:79] Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+E1230 18:10:01.519616    1 httplog.go:79] Prediction Output: 
+[20.35373177134412]
+E1230 18:10:01.652319    1 httplog.go:79]  "POST /predict HTTP/1.1" 200 -
