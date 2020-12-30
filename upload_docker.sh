@@ -11,7 +11,7 @@ dockerpath=amitrhe/ml-microservice
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login -u amitrhe -p 
+docker login -u amitrhe
 docker tag $dockerpath:latest $dockerpath:current
 
 # Step 3:
