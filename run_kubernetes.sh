@@ -10,6 +10,8 @@ dockerpath=amitrhe/ml-microservice
 # Step 2
 # Run the Docker Hub container with kubernetes
 kubectl create deployment udacity-ml --image=amitrhe/ml-microservice --port=80
+# wait till pods become ready
+kubectl wait --for=condition=ready pod -l app=udacity-ml
 
 # Step 3:
 # List kubernetes pods
